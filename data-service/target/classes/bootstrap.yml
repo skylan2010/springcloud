@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  
+spring:
+  cloud:
+    config:
+      label: master
+      uri: http://localhost:8082
+      name: config,users
+      profile: dev
+      #username: user
+      #password: admin
+      discovery:
+        enabled: true
+        service-id: config-server
